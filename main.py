@@ -25,16 +25,13 @@ def sort_on(dict_item):
 def print_report(count_dict):
     
     list_of_dicts = [{"name": char, "num": val} for char, val in count_dict.items()]
-    print(len(list_of_dicts))
+    #print(len(list_of_dicts))
 
     print("--- Begin report of books/frankenstein.txt ---")
     list_of_dicts.sort(reverse=True, key=sort_on)
 
     for dict_item in list_of_dicts:
         print(f" The {dict_item["name"]} character was found {dict_item["num"]} times") 
-    
-            
-
     
 def main():
     with open("./books/frankenstein.txt") as file:
